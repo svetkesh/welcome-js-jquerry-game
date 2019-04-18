@@ -1,6 +1,4 @@
-console.log("I'm here ;)");
-
-
+console.log("I'm here ;). Test script started");
 // dots.eq(0).click(function(){$(this).css('background-color', 'blue')})
 
 // var tds = $('td');  // original array of td for x|z text swapping
@@ -23,6 +21,7 @@ function getAddr(num) {
 function checkRow(num) {
 
       // variant for .text value comparation
+
   // var winSign = dots.eq(num).text();
   // var thisRow = getAddr(num)[1];
   // var bar = 0;
@@ -64,24 +63,11 @@ function checkRow(num) {
         // console.log('bar resetted '+bar);
       }
     }
-
-
   return false
-
-
-
-
 }
 
-
-
 function fillSigns(cellInd, sign){
-  // $(this).css('background-color', 'silver');
-  // $(this).text('x');
-  // console.log(getAddr(dots.index(this)));
-
   var lastCell = 0;
-
   var xy = getAddr(cellInd);
   console.log(xy);
   var thisY = getAddr(cellInd)[1];
@@ -95,21 +81,13 @@ function fillSigns(cellInd, sign){
   console.log(colorize);
 
   for (var y = 6; y >= 0; y--) {
-    // array[i]
-    // console.log(dots.text());
-    // console.log('ku' + y);
-    // console.log(dots.eq(thisX*7 + y).text());
-
-    // dots.eq(y*7 + thisX).css('background-color', 'silver');  // this Ok
+    // dots.eq(y*7 + thisX).css('background-color', 'silver');  // this tested Ok
     console.log(y*7 + thisX + " : " + dots.eq(y*7 + thisX).text());  // this Ok
     if (dots.eq(y*7 + thisX).text() === "") {
       // $(dots.eq(y*7 + thisX)).text('x');
       $(dots.eq(y*7 + thisX)).text(sign);  // original array of td for x|z text swapping
-      // $(dots.eq(y*7 + thisX)).css(colorize);  // 'background-color', 'red'
 
       $(dots).eq(y*7 + thisX).css('background-color', sign);  // this is OK for production
-      // $(dots).eq(y*7 + thisX).animate(colorize, 500,);  // not working
-
       // console.log($(dots).eq(y*7 + thisX).attr('background-color'));
       // console.log($(dots).eq(y*7 + thisX).css());
       break;
@@ -118,25 +96,11 @@ function fillSigns(cellInd, sign){
   lastCell = y*7 + thisX;
   return y*7 + thisX
 }
-//
-// dots.eq(0).click(function(){
-//   $(this).css('background-color', 'red');
-//   console.log('addr' + Math.floor(dots.index(this)/7) + ' ' + dots.index(this) % 7);
-//   console.log(getAddr(dots.index(this)));
-//   // console.log($(this).index(this));
-// })
 
 dots.on("click", function() {
-  // $(this).css('background-color', 'silver');
-  // $(this).text('x');
-  // console.log(getAddr(dots.index(this)));
-
   var cellInd = dots.index(this);
   // console.log(cellInd);
-
   var currentColor = fireColor();
-
-
   // do {
   //   if (currentColor === colors[0]){
   //     currentColor = colors[1];
@@ -148,7 +112,6 @@ dots.on("click", function() {
   //
   // } while (! checkRow(lastCell) );
 
-
   var lastCell = fillSigns(cellInd, currentColor);
   var winCondition = checkRow(lastCell)
   console.log('Sign wins: ' + winCondition);
@@ -158,7 +121,6 @@ dots.on("click", function() {
     $('#gameHint').text('Winner is ' + colors[colorCounter % 2]);
     $('#gameTable').fadeOut(); //
     $('#resetGame').fadeIn(); // show resetGame button
-
   }
-
-})
+}
+)
