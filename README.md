@@ -14,10 +14,13 @@ in the **JQuery** part in the beautiful Udemy course
 https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/learn/
 
 Start the game:
+
 ![Start page](https://github.com/svetkesh/welcome-js-jquerry-game/blob/master/screenshots/startpage.png)
 
 Click on balls, try to gather 4 in row:
+
 ![Running the game](https://github.com/svetkesh/welcome-js-jquerry-game/blob/master/screenshots/rungame.png)
 
 Got the winner and the button for reset game is displayed:
+
 ![Winner is defined and button reset the game displayed](https://github.com/svetkesh/welcome-js-jquerry-game/blob/master/screenshots/winner.png)
