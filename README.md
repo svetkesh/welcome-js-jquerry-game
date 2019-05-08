@@ -6,7 +6,7 @@ for some JavaScript concepts.
 
 Uses JQuery framework.
 
-Born as a solution of the paarticular task
+Born as a solution of the particular task
 in the **JQuery** part in the beautiful Udemy course
 
 'Python and Django Full Stack Web Developer Bootcamp' by Jose Portilla.
